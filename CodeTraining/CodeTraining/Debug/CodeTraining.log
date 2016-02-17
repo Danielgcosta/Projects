@@ -1,40 +1,10 @@
-﻿  codeTraining.cpp
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(8): error C2059: syntax error: '<'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(19): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(25): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(40): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(53): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(61): error C2131: expression did not evaluate to a constant
-  e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(61): note: failure was caused by non-constant arguments or reference to a non-constant symbol
-  e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(61): note: see usage of 'i'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(61): error C2440: 'initializing': cannot convert from 'float' to 'float [i]'
-  e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(61): note: There are no conversions to array types, although there are conversions to references or pointers to arrays
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(63): error C2065: 'arrayOfRandomValues': undeclared identifier
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(65): error C2065: 'arrayOfRandomValues': undeclared identifier
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(67): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(70): error C2065: 'arrayOfRandomValues': undeclared identifier
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(71): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(71): error C2144: syntax error: 'int' should be preceded by ';'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(71): error C2144: syntax error: 'int' should be preceded by ']'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(71): error C2133: 'bits': unknown size
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(71): error C2143: syntax error: missing ';' before ']'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(71): error C2086: 'int numberOfBits': redefinition
-  e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(69): note: see declaration of 'numberOfBits'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(72): error C2144: syntax error: 'int' should be preceded by ']'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(72): error C2144: syntax error: 'int' should be preceded by ';'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(72): error C2133: 'bytes': unknown size
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(72): error C2143: syntax error: missing ';' before ']'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(72): error C2086: 'int numberOfBytes': redefinition
-  e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(70): note: see declaration of 'numberOfBytes'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(73): error C2446: '<': no conversion from 'int *' to 'unsigned int'
-  e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(73): note: There is no context in which this conversion is possible
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(73): error C2040: '<': 'unsigned int' differs in levels of indirection from 'int []'
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(89): error C2065: 'arrayOfRandomValues': undeclared identifier
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(92): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(97): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(102): error C2653: 'CodeTraining': is not a class or namespace name
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(160): error C2660: 'activationFunction': function does not take 1 arguments
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(170): error C2660: 'activationFunction': function does not take 1 arguments
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(175): error C2660: 'activFunDerivative': function does not take 1 arguments
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(192): error C2660: 'activFunDerivative': function does not take 1 arguments
-e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(262): error C2653: 'CodeTraining': is not a class or namespace name
+﻿  main.cpp
+e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.h(1): error C2059: syntax error: 'public'
+e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.h(2): error C2447: '{': missing function header (old-style formal list?)
+e:\documentos\visual studio 2015\projects\codetraining\codetraining\main.cpp(20): error C2653: 'CodeTraining': is not a class or namespace name
+e:\documentos\visual studio 2015\projects\codetraining\codetraining\main.cpp(20): error C3861: 'randomMatrixCreator': identifier not found
+  codeTraining.cpp
+e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.h(1): error C2059: syntax error: 'public'
+e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.h(2): error C2447: '{': missing function header (old-style formal list?)
+e:\documentos\visual studio 2015\projects\codetraining\codetraining\codetraining.cpp(64): error C2653: 'CodeTraining': is not a class or namespace name
+  Generating Code...
