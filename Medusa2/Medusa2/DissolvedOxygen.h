@@ -9,8 +9,9 @@ class DissolvedOxygen : public Sensor
 public:
 	DissolvedOxygen(int port);
 	~DissolvedOxygen();
-
 	std::string getType();
+private:
+	void evaluate();
 };
 
 #endif

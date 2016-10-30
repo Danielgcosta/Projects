@@ -9,13 +9,9 @@ class Ultrassonic :	public Sensor
 public:
 	Ultrassonic(int port);
 	~Ultrassonic();
-
-	std::string getType();
-
-	
+	std::string getType();	
 private:
-	float _distance;
+	void evaluate();
 };
 
 #endif
-

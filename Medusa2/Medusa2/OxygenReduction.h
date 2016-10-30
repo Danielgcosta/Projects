@@ -8,9 +8,11 @@ class OxygenReduction :	public Sensor
 {
 public:
 	OxygenReduction(int port);
-	~OxygenReduction();
+	~OxygenReduction();	
+	std::string getType();	
 
-	std::string getType();
+private:
+	void evaluate();
 };
 
 #endif

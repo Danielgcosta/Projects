@@ -12,6 +12,13 @@
 	Karla Figueiredo
 */
 
+
+// Como o programa está sendo criado no Visual Studio, algumas partes só funcionarão no Arduino,
+// com os devidos sensores, logo, deve-se verificar o que deve ser descomentado antes de embarcar 
+// o código para a plataforma
+
+// OxygenReduction::evaluate()
+
 #include "main.h"
 #include "stdio.h"
 #include <iostream>
@@ -42,12 +49,31 @@ int main() {
 	{
 		Thermal* sensor = new Thermal(sensorPort);
 	}
-	//enum SensorType {Ultrassonic, Thermal, Ph, DissolvedOxygen, OxygenReduction};
-	//cin >> SensorType;
+
 
 	//cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
 	//cout << "The selected Sensor is of type " << sensor->getType() << endl;
 
 	int exitChar;
 	cin >> exitChar;
+}
+
+
+/*
+	// For Oxygen Reduction sensor
+	#include <SoftwareSerial.h>
+	#define rx ?	//Possible ports: 10 to 15; 50 to 53; A8 to A15
+	#define tx ? 
+	SoftwareSerial orpSerial(rx, tx);
+*/
+
+void setup()
+{
+	// For Oxygen Reduction sensor
+	// orpSerial.begin(9600);
+}
+
+void loop()
+{
+
 }

@@ -18,3 +18,9 @@ void Sensor::setPort(int port)
 {
 	_port = port;
 }
+
+float Sensor::getValue()
+{
+	evaluate();
+	return _value;
+}

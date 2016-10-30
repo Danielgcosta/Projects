@@ -9,8 +9,9 @@ class Thermal : public Sensor
 public:
 	Thermal(int port);
 	~Thermal();
-
 	std::string getType();
+private:
+	void evaluate();
 };
 
 #endif

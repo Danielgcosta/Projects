@@ -9,8 +9,9 @@ class PH : public Sensor
 public:
 	PH(int port);
 	~PH();
-
 	std::string getType();
+private:
+	void evaluate();
 };
 
 #endif

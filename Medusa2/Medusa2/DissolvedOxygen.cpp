@@ -15,3 +15,9 @@ string DissolvedOxygen::getType()
 {
 	return _type;
 }
+
+void DissolvedOxygen::evaluate()
+{
+	// Implementar o cálculo do oxigênio dissolvido
+	_value = 0;
+}
