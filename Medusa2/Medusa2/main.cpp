@@ -47,6 +47,7 @@ int main() {
 	int sensorPort;
 	std::cin >> sensorPort;	
 	
+	bool unknownSensor = false;
 	Ultrassonic* sensor = new Ultrassonic(sensorPort);
 	if (SensorType == 'U' || SensorType == 'u') {
 		Ultrassonic* sensor = new Ultrassonic(sensorPort);
@@ -74,11 +75,14 @@ int main() {
 	else
 	{
 		std::cout << "Unknown Sensor" << endl;
+		unknownSensor = true;
 	}
 	
-	std::cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
-	std::cout << "The selected Sensor is of type " << sensor->getType() << endl;
-	std::cout << "The reading of this sensor is " << sensor->getValue() << endl;
+	if (!unknownSensor) {
+		std::cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
+		std::cout << "The selected Sensor is of type " << sensor->getType() << endl;
+		std::cout << "The reading of this sensor is " << sensor->getValue() << endl;
+	}
 
 	int exitChar;
 	std::cin >> exitChar;
