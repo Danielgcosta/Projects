@@ -21,6 +21,10 @@ public:
 private:
 
 protected:
+	// Function to evaluate the reading of the sensor
+	// Each sensor will implement its own
+	virtual void evaluate() = 0;
+
 	// Port and sensor type
 	int _port;
 	std::string _type;
