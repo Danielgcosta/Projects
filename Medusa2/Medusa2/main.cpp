@@ -41,16 +41,6 @@ int main() {
 }
 
 
-main::main()
-{
-	//if manualConfiguration
-}
-
-main::~main()
-{
-}
-
-
 /*
 int answer;
 cout << "Olá, quantos Sensores você vai usar?" << endl;
