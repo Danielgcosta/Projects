@@ -16,7 +16,10 @@
 #include "stdio.h"
 #include <iostream>
 #include <string>
+
+//Sensors
 #include "Ultrassonic.h"
+#include "Thermal.h"
 
 using namespace std;
 
