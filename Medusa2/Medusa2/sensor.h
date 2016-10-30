@@ -18,6 +18,9 @@ public:
 	// Gets type of the sensor
 	virtual std::string getType() = 0;
 
+	// Accesses the value of the sensor reading
+	virtual float getValue() = 0;
+
 private:
 
 protected:

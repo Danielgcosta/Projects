@@ -11,6 +11,10 @@ public:
 	~Ultrassonic();
 
 	std::string getType();
+
+	
+private:
+	float _distance;
 };
 
 #endif
