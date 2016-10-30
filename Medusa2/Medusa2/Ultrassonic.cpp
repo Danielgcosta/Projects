@@ -1,5 +1,4 @@
 #include "Ultrassonic.h"
-#include "string";
 
 using namespace std;
 
@@ -20,5 +19,5 @@ string Ultrassonic::getType()
 void Ultrassonic::evaluate()
 {
 	// Implementar o cálculo da distância e retorno do sensor
-	_value = 0;
+	_value = 1;
 }

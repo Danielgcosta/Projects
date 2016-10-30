@@ -27,35 +27,60 @@
 //Sensors
 #include "Ultrassonic.h"
 #include "Thermal.h"
+#include "OxygenReduction.h"
+#include "DissolvedOxygen.h"
+#include "PH.h"
 
 using namespace std;
 
 int main() {
-	cout << "selecione o tipo de Sensor: "<< endl;
-	cout << "[0] Ultrassonic, [1] Thermal, [2] Ph, [3] DissolvedOxygen, [4] OxygenReduction " << endl;
+	std::cout << "Medusa 2.0 danielgc@ele.puc-rio.br" << endl;
+	std::cout << "Sensor type and port configuration" << endl << endl;
+	std::cout << "Select sensor type: "<< endl;
+	std::cout << "[U]ltrassonic, [T]hermal, [P]h, [D]issolvedOxygen, [O]xygenReduction " << endl;
+	char SensorType;
+	std::cin >> SensorType;
+	//getline(std::cin, SensorType);
 	
-	cout << "selecione o tipo de Sensor: " << endl;
-	string SensorType;
-	getline(cin, SensorType);
-	
-	cout << "selecione a porta do Sensor: " << endl;
+	std::cout << "Select sensor port: " << endl;
 	int sensorPort;
-	cin >> sensorPort;	
+	std::cin >> sensorPort;	
 	
-	if (SensorType == "Ultrassonic") {
+	Ultrassonic* sensor = new Ultrassonic(sensorPort);
+	if (SensorType == 'U' || SensorType == 'u') {
 		Ultrassonic* sensor = new Ultrassonic(sensorPort);
 	}
-	else //(SensorType == "Thermal")
+	else if (SensorType == 'T' || SensorType == 't')
 	{
+		delete sensor;
 		Thermal* sensor = new Thermal(sensorPort);
 	}
-
-
-	//cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
-	//cout << "The selected Sensor is of type " << sensor->getType() << endl;
+	else if (SensorType == 'O' || SensorType == 'o')
+	{
+		delete sensor;
+		OxygenReduction* sensor = new OxygenReduction(sensorPort);
+	}
+	else if (SensorType == 'D' || SensorType == 'd')
+	{
+		delete sensor;
+		DissolvedOxygen* sensor = new DissolvedOxygen(sensorPort);
+	}
+	else if (SensorType == 'P' || SensorType == 'p')
+	{
+		delete sensor;
+		PH* sensor = new PH(sensorPort);
+	}
+	else
+	{
+		std::cout << "Unknown Sensor" << endl;
+	}
+	
+	std::cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
+	std::cout << "The selected Sensor is of type " << sensor->getType() << endl;
+	std::cout << "The reading of this sensor is " << sensor->getValue() << endl;
 
 	int exitChar;
-	cin >> exitChar;
+	std::cin >> exitChar;
 }
 
 

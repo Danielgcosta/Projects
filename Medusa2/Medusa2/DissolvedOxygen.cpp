@@ -4,7 +4,7 @@ using namespace std;
 
 DissolvedOxygen::DissolvedOxygen(int port) : Sensor(port)
 {
-	_type = "Thermal";
+	_type = "DissolvedOxygen";
 }
 
 DissolvedOxygen::~DissolvedOxygen()
@@ -19,5 +19,5 @@ string DissolvedOxygen::getType()
 void DissolvedOxygen::evaluate()
 {
 	// Implementar o cálculo do oxigênio dissolvido
-	_value = 0;
+	_value = 4;
 }
