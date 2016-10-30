@@ -18,4 +18,3 @@ void Sensor::setPort(int port)
 {
 	_port = port;
 }
-
