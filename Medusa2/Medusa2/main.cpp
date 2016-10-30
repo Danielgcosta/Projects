@@ -38,17 +38,15 @@ int main() {
 	if (SensorType == "Ultrassonic") {
 		Ultrassonic* sensor = new Ultrassonic(sensorPort);
 	}
-	else if (SensorType == "Thermal")
+	else //(SensorType == "Thermal")
 	{
 		Thermal* sensor = new Thermal(sensorPort);
 	}
 	//enum SensorType {Ultrassonic, Thermal, Ph, DissolvedOxygen, OxygenReduction};
 	//cin >> SensorType;
 
-	
-	cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
-	cout << "The selected Sensor is of type " << sensor->getType() << endl;
-
+	//cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
+	//cout << "The selected Sensor is of type " << sensor->getType() << endl;
 
 	int exitChar;
 	cin >> exitChar;

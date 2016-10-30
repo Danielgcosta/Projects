@@ -27,6 +27,9 @@
     <ClInclude Include="Thermal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DissolvedOxygen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -39,6 +42,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Thermal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DissolvedOxygen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
