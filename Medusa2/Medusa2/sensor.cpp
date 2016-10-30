@@ -1,20 +1,20 @@
-#include "sensor.h"
+#include "Sensor.h"
 
-sensor::sensor(int port)
+Sensor::Sensor(int port)
 {
 	_port = port;
 }
 
-sensor::~sensor()
+Sensor::~Sensor()
 {
 }
 
-int sensor::getPort()
+int Sensor::getPort()
 {
 	return _port;
 }
 
-void sensor::setPort(int port)
+void Sensor::setPort(int port)
 {
 	_port = port;
 }

@@ -111,11 +111,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
-    <ClInclude Include="sensor.h" />
+    <ClInclude Include="Sensor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="sensor.cpp" />
+    <ClCompile Include="Sensor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

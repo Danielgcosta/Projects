@@ -1,9 +1,9 @@
 #pragma once
-class sensor
+class Sensor
 {
 public:
-	sensor( int port );
-	~sensor();
+	Sensor( int port );
+	~Sensor();
 
 	int getPort();
 	void setPort( int port );

@@ -16,24 +16,24 @@
 #include "stdio.h"
 #include <iostream>
 #include <string>
-#include "sensor.h"
+#include "Sensor.h"
 
 using namespace std;
 
 int main() {
 
 
-	cout << "selecione o tipo de sensor: " << endl;
-	string sensorType;
-	getline(cin, sensorType);
+	cout << "selecione o tipo de Sensor: " << endl;
+	string SensorType;
+	getline(cin, SensorType);
 
-	cout << "selecione a porta do sensor: " << endl;
-	int sensorPort;
-	cin >> sensorPort;
-	sensor* ultrasonic1 = new sensor(sensorPort);
+	cout << "selecione a porta do Sensor: " << endl;
+	int SensorPort;
+	cin >> SensorPort;
+	Sensor* ultrasonic1 = new Sensor(SensorPort);
 	
 	int returnPort = ultrasonic1->getPort();
-	cout << "The selected sensor was configured to port " << ultrasonic1->getPort() << endl;
+	cout << "The selected Sensor was configured to port " << ultrasonic1->getPort() << endl;
 	
 	int exitChar;
 	cin >> exitChar;
@@ -43,7 +43,7 @@ int main() {
 
 main::main()
 {
-	if manualConfiguration
+	//if manualConfiguration
 }
 
 main::~main()
@@ -53,7 +53,7 @@ main::~main()
 
 /*
 int answer;
-cout << "Olá, quantos sensores você vai usar?" << endl;
+cout << "Olá, quantos Sensores você vai usar?" << endl;
 cin >> answer;
 cout << "Sua resposta foi: " << answer << endl;
 
@@ -73,7 +73,7 @@ confirm = '!';
 }
 }
 
-cout << "Quantidade de sensores corretamente configurada." << endl;
+cout << "Quantidade de Sensores corretamente configurada." << endl;
 int exitFlag;
 cin >> exitFlag;
 */
