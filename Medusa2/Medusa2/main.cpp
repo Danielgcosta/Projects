@@ -16,54 +16,25 @@
 #include "stdio.h"
 #include <iostream>
 #include <string>
-#include "Sensor.h"
+#include "Ultrassonic.h"
 
 using namespace std;
 
 int main() {
-
-
-	cout << "selecione o tipo de Sensor: " << endl;
-	string SensorType;
-	getline(cin, SensorType);
+	cout << "selecione o tipo de Sensor: "<< endl;
+	cout << "[0] Ultrassonic, [1] Thermal, [2] Ph, [3] DissolvedOxygen, [4] OxygenReduction " << endl;
+	//enum SensorType {Ultrassonic, Thermal, Ph, DissolvedOxygen, OxygenReduction};
+	//cin >> SensorType;
 
 	cout << "selecione a porta do Sensor: " << endl;
-	int SensorPort;
-	cin >> SensorPort;
-	Sensor* ultrasonic1 = new Sensor(SensorPort);
+	int sensorPort;
+	cin >> sensorPort;	
 	
-	int returnPort = ultrasonic1->getPort();
-	cout << "The selected Sensor was configured to port " << ultrasonic1->getPort() << endl;
-	
+	Ultrassonic* ultrassonic = new Ultrassonic(sensorPort);
+	cout << "The selected Sensor was configured to port " << ultrassonic->getPort() << endl;
+	cout << "The selected Sensor is of type " << ultrassonic->getType() << endl;
+
+
 	int exitChar;
 	cin >> exitChar;
-
 }
-
-
-/*
-int answer;
-cout << "Olá, quantos Sensores você vai usar?" << endl;
-cin >> answer;
-cout << "Sua resposta foi: " << answer << endl;
-
-char confirm = '!';
-while (confirm != 'S' && confirm != 'N' && confirm != 's' && confirm != 'n')
-{
-cout << "Confirma a quantidade? (S/N)" << endl;
-cin >> confirm;
-if (confirm != 'S' && confirm != 'N' && confirm != 's' && confirm != 'n') {
-cout << "Resposta " << confirm << " inválida." << endl;
-}
-else if (confirm == 'n' || confirm == 'N') {
-cout << "Digite a quantidade desejada: " << endl;
-cin >> answer;
-cout << "Sua resposta foi: " << answer << endl;
-confirm = '!';
-}
-}
-
-cout << "Quantidade de Sensores corretamente configurada." << endl;
-int exitFlag;
-cin >> exitFlag;
-*/

@@ -112,10 +112,12 @@
   <ItemGroup>
     <ClInclude Include="main.h" />
     <ClInclude Include="Sensor.h" />
+    <ClInclude Include="Ultrassonic.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sensor.cpp" />
+    <ClCompile Include="Ultrassonic.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
