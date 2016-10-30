@@ -20,10 +20,10 @@ void OxygenReduction::evaluate()
 	/*
 	string sensorString;
 	// If a character has been received
-	if (orpSerial.available() > 0)
+	if (oxygenReductionSerial.available() > 0)
 	{
 		// Gets the received char
-		char inchar = (char)orpSerial.read();
+		char inchar = (char)oxygenReductionSerial.read();
 		// Composes the string
 		sensorString += inchar;
 		// Reading ends with a CR

@@ -18,6 +18,7 @@
 // o código para a plataforma
 
 // OxygenReduction::evaluate()
+// DissolvedOxygen::evaluate()
 
 #include "main.h"
 #include "stdio.h"
@@ -85,20 +86,27 @@ int main() {
 
 
 /*
-	// For Oxygen Reduction sensor
+	// For Oxygen Reduction and dissolvedOxygen sensors
 	#include <SoftwareSerial.h>
-	#define rx ?	//Possible ports: 10 to 15; 50 to 53; A8 to A15
-	#define tx ? 
-	SoftwareSerial orpSerial(rx, tx);
+	#define oxygenReductionReceive ?	//Possible ports: 10 to 15; 50 to 53; A8 to A15
+	#define oxygenReductionTransmit ?
+	#define dissolvedOxygenReceive ?	//Possible ports: 10 to 15; 50 to 53; A8 to A15
+	#define dissolvedOxygenTransmit ?
+	SoftwareSerial oxygenReductionSerial(oxygenReductionReceive, oxygenReductionTransmit);
+	SoftwareSerial dissolvedOxygenSerial(dissolvedOxygenReceive, dissolvedOxygenTransmit);
 */
 
 void setup()
 {
-	// For Oxygen Reduction sensor
-	// orpSerial.begin(9600);
+	// For Oxygen Reduction and dissolvedOxygen sensors
+	// oxygenReductionSerial.begin(9600);
+	// dissolvedOxygenSerial.begin(9600);
 }
 
 void loop()
 {
-
+	// Read sensors
+	// Evaluate fuzzy trajectory avoidance
+	// Activate motors (send data to Ardupilot)
+	// Evaluate fuzzy alert
 }
