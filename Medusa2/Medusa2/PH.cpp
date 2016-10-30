@@ -21,5 +21,5 @@ void PH::evaluate()
 	// R = Ideal Gas Constant
 	// T = Temperature in Kelvin
 	// F = Faraday constant
-	_value = 3;
+	_value = 2;
 }

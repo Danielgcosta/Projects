@@ -19,5 +19,5 @@ string Ultrassonic::getType()
 void Ultrassonic::evaluate()
 {
 	// Implementar o cálculo da distância e retorno do sensor
-	_value = 1;
+	_value = 0;
 }

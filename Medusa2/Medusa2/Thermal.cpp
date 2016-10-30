@@ -19,5 +19,5 @@ string Thermal::getType()
 void Thermal::evaluate()
 {
 	// Implementar o retorno do sensor de temperatura
-	_value = 0;
+	_value = 1;
 }

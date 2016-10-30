@@ -34,5 +34,5 @@ void OxygenReduction::evaluate()
 	*/
 
 	// DELETAR:
-	_value = 2;
+	_value = 4;
 }

@@ -35,5 +35,5 @@ void DissolvedOxygen::evaluate()
 	*/
 
 	// DELETAR:
-	_value = 4;
+	_value = 3;
 }
