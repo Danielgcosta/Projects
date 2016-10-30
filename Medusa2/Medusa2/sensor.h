@@ -28,6 +28,9 @@ protected:
 	// Port and sensor type
 	int _port;
 	std::string _type;
+
+	// Registers the value read by the sensor
+	float _value;
 };
 
 #endif
