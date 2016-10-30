@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClInclude Include="DissolvedOxygen.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="OxygenReduction.h" />
     <ClInclude Include="PH.h" />
     <ClInclude Include="Sensor.h" />
     <ClInclude Include="Thermal.h" />
@@ -120,6 +121,7 @@
   <ItemGroup>
     <ClCompile Include="DissolvedOxygen.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="OxygenReduction.cpp" />
     <ClCompile Include="PH.cpp" />
     <ClCompile Include="Sensor.cpp" />
     <ClCompile Include="Thermal.cpp" />

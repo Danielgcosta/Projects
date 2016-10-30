@@ -7,7 +7,7 @@
 class PH : public Sensor
 {
 public:
-	PH();
+	PH(int port);
 	~PH();
 
 	std::string getType();

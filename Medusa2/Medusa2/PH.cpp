@@ -1,8 +1,7 @@
 #include "PH.h"
-
 using namespace std;
 
-PH::PH() 
+PH::PH(int port) : Sensor(port)
 {
 	_type = "PH";
 }

@@ -33,6 +33,9 @@
     <ClInclude Include="PH.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="OxygenReduction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -51,6 +54,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PH.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OxygenReduction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
