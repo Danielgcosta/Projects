@@ -34,14 +34,14 @@ int main() {
 	
 	SensorManager* sensorManager = new SensorManager;
 	sensorManager->addSensor();
-	std::cout << "First Sensor Configured";
-
-
+	std::cout << "First Sensor Configured" << std::endl;
+	SensorList sensorList = sensorManager->getList();
 
 	sensorManager->addSensor();
-	std::cout << "Second Sensor Configured";
+	std::cout << "Second Sensor Configured" << std::endl;
+
 	sensorManager->addSensor();
-	std::cout << "Third Sensor Configured";
+	std::cout << "Third Sensor Configured" << std::endl;
 
 	int exitChar;
 	std::cin >> exitChar;

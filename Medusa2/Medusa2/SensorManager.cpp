@@ -74,10 +74,10 @@ void SensorManager::addSensor()
 	}
 
 	if (!unknownSensor) {
-		std::cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
-		std::cout << "The selected Sensor is of type " << sensor->getType() << endl;
-		std::cout << "The reading of this sensor is " << sensor->getValue() << endl;
+		std::cout << "The selected " << sensor->getType() << " Sensor was configured to port " << sensor->getPort() << endl;
+		std::cout << "Its reading are: " << sensor->getValue() << std::endl;
 		_sensorList.push_back(sensor);
+		std::cout<< std::endl;
 	}	
 }
 
