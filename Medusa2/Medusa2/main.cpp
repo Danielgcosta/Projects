@@ -55,6 +55,12 @@ void manualConfiguration()
 	std::cout << "Finished configuring all sensors" << std::endl;
 }
 
+void automaticConfiguration()
+{
+	std::cout << "Automatic Sensor Configuration" << std::endl;
+	// Automatic configuration
+}
+
 void setup()
 {
 	std::cout << "Medusa 2.0 danielgc@ele.puc-rio.br" << endl;
@@ -67,8 +73,19 @@ void setup()
 	// oxygenReductionSerial.begin(9600);
 	// dissolvedOxygenSerial.begin(9600);
 	
-	// Configure sensors manually
-	manualConfiguration();
+	std::cout << "[A]utomatic or [M]anual sensor configuration? ";
+	char answer;
+	std::cin >> answer;
+
+	if (answer == 'a' || answer == 'A') {
+		automaticConfiguration();
+	}
+	else if (answer == 'm' || answer == 'M') {
+		manualConfiguration();
+	}
+	else {
+		std::cout << "Not an acceptable option" << std::endl;
+	}
 }
 
 void loop()
