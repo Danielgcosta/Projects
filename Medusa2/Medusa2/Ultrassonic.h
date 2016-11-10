@@ -7,9 +7,13 @@
 class Ultrassonic :	public Sensor
 {
 public:
-	Ultrassonic(int port);
+	Ultrassonic(int port, int trigger);
 	~Ultrassonic();
-	std::string getType();	
+	int getTrigger();
+	void setTrigger(int port);
+	std::string getType();
+protected:
+	int _triggerPort;
 private:
 	void evaluate();
 };

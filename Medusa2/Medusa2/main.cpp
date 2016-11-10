@@ -48,9 +48,12 @@ int main() {
 	std::cin >> sensorPort;	
 	
 	bool unknownSensor = false;
-	Ultrassonic* sensor = new Ultrassonic(sensorPort);
+	Ultrassonic* sensor = new Ultrassonic(sensorPort,0);
 	if (SensorType == 'U' || SensorType == 'u') {
-		Ultrassonic* sensor = new Ultrassonic(sensorPort);
+		cout << "Select trigger port: " << endl;
+		int triggerPort;
+		cin >> triggerPort;
+		sensor->setTrigger(triggerPort);
 	}
 	else if (SensorType == 'T' || SensorType == 't')
 	{
