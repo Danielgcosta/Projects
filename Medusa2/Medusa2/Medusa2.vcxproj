@@ -115,6 +115,7 @@
     <ClInclude Include="OxygenReduction.h" />
     <ClInclude Include="PH.h" />
     <ClInclude Include="Sensor.h" />
+    <ClInclude Include="SensorFactory.h" />
     <ClInclude Include="Thermal.h" />
     <ClInclude Include="Ultrassonic.h" />
   </ItemGroup>
@@ -124,6 +125,7 @@
     <ClCompile Include="OxygenReduction.cpp" />
     <ClCompile Include="PH.cpp" />
     <ClCompile Include="Sensor.cpp" />
+    <ClCompile Include="SensorFactory.cpp" />
     <ClCompile Include="Thermal.cpp" />
     <ClCompile Include="Ultrassonic.cpp" />
   </ItemGroup>
