@@ -28,26 +28,6 @@
 
 using namespace std;
 
-int main() {
-	std::cout << "Medusa 2.0 danielgc@ele.puc-rio.br" << endl;
-	std::cout << "Sensor type and port configuration" << endl << endl;
-	
-	SensorManager* sensorManager = new SensorManager;
-	sensorManager->addSensor();
-	std::cout << "First Sensor Configured" << std::endl;
-	SensorList sensorList = sensorManager->getList();
-
-	sensorManager->addSensor();
-	std::cout << "Second Sensor Configured" << std::endl;
-
-	sensorManager->addSensor();
-	std::cout << "Third Sensor Configured" << std::endl;
-
-	int exitChar;
-	std::cin >> exitChar;
-}
-
-
 /*
 	// For Oxygen Reduction and dissolvedOxygen sensors
 	#include <SoftwareSerial.h>
@@ -59,11 +39,36 @@ int main() {
 	SoftwareSerial dissolvedOxygenSerial(dissolvedOxygenReceive, dissolvedOxygenTransmit);
 */
 
+void manualConfiguration()
+{
+	std::cout << "Manual Sensor Configuration" << std::endl;
+	std::cout << "How many sensors are going to be used? ";
+	unsigned int answer;
+	std::cin >> answer;
+	
+	SensorManager* sensorManager = new SensorManager;	
+	for (unsigned int sensor = 0; sensor < answer; sensor++)
+	{		
+		sensorManager->addSensor();		
+	}
+	//SensorList sensorList = sensorManager->getList();
+	std::cout << "Finished configuring all sensors" << std::endl;
+}
+
 void setup()
 {
+	std::cout << "Medusa 2.0 danielgc@ele.puc-rio.br" << endl;
+	std::cout << "Sensor type and port configuration" << endl << endl;
+
+	//Serial.println("Medusa 2.0 danielgc@ele.puc-rio.br");
+	//Serial.println("Sensor type and port configuration\n");
+
 	// For Oxygen Reduction and dissolvedOxygen sensors
 	// oxygenReductionSerial.begin(9600);
 	// dissolvedOxygenSerial.begin(9600);
+	
+	// Configure sensors manually
+	manualConfiguration();
 }
 
 void loop()
@@ -72,4 +77,15 @@ void loop()
 	// Evaluate fuzzy trajectory avoidance
 	// Activate motors (send data to Ardupilot)
 	// Evaluate fuzzy alert
+}
+
+int main() {
+
+	setup();
+	loop();
+
+	// Just to stop before finishing
+	// Waits for a end character
+	int exitChar;
+	std::cin >> exitChar;
 }
