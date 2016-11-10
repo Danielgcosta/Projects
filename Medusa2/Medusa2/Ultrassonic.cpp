@@ -3,6 +3,9 @@
 
 using namespace std;
 
+// Number of readings to average
+const int NUMBER_OF_READINGS = 3;
+
 Ultrassonic::Ultrassonic(int port, int trigger) : Sensor(port)
 {
 	_type = "Ultrassonic";
@@ -44,16 +47,24 @@ void Ultrassonic::evaluate()
 	
 	cout << "Triggering port " << getTrigger() << endl;
 	// Dispara o ultrassom
-	//uncomment
-	//digitalWrite(_triggerPort, LOW);
-	//delayMicroseconds(20);
-	//digitalWrite(_triggerPort, HIGH);
-	//delayMicroseconds(20);
-	//digitalWrite(_triggerPort, LOW);
-
-	// unsigned long pulse = pulseIn(getPort(), HIGH);
-
-	_value = 0;
-	cout << "Value read " << _value << endl;
 	
+	//UNCOMMENT!
+	double readings[NUMBER_OF_READINGS];
+	for (unsigned int reading = 0; reading < NUMBER_OF_READINGS; reading++) {
+		//digitalWrite(_triggerPort, LOW);
+		//delayMicroseconds(20);
+		//digitalWrite(_triggerPort, HIGH);
+		//delayMicroseconds(20);
+		//digitalWrite(_triggerPort, LOW);
+
+		// unsigned long pulse = pulseIn(getPort(), HIGH);
+		double pulse = 3.;
+		readings[reading] = pulse / 58.;
+	}
+	double sum = 0;
+	for (unsigned int reading = 0; reading < NUMBER_OF_READINGS; reading++) {
+		sum += readings[reading];
+	}
+	_value = sum/NUMBER_OF_READINGS;
+	cout << "Value read " << _value << endl;	
 }

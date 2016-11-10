@@ -33,7 +33,7 @@ protected:
 	std::string _type;
 
 	// Registers the value read by the sensor
-	float _value;
+	double _value;
 };
 
 #endif
