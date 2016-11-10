@@ -28,9 +28,9 @@ void SensorManager::addSensor()
 {
 	std::cout << "Select sensor type: " << endl;
 	std::cout << "[U]ltrassonic, [T]hermal, [P]h, [D]issolvedOxygen, [O]xygenReduction " << endl;
-	char SensorType;
-	std::cin >> SensorType;
-	//getline(std::cin, SensorType);
+	char sensorType;
+	std::cin >> sensorType;
+	//getline(std::cin, sensorType);
 
 	std::cout << "Select sensor port: " << endl;
 	int sensorPort;
@@ -40,29 +40,29 @@ void SensorManager::addSensor()
 
 	// Must create a default sensor or else it won't compile
 	Ultrassonic* sensor = new Ultrassonic(0, 0);
-	if (SensorType == 'U' || SensorType == 'u' ) {
+	if (sensorType == 'U' || sensorType == 'u' ) {
 		delete sensor;
 		std::cout << "Select trigger port: " << endl;
 		int triggerPort;
 		std::cin >> triggerPort;
 		Ultrassonic* sensor = new Ultrassonic(sensorPort, triggerPort);
 	}
-	else if (SensorType == 'T' || SensorType == 't')
+	else if (sensorType == 'T' || sensorType == 't')
 	{
 		delete sensor;
 		Thermal* sensor = new Thermal(sensorPort);
 	}
-	else if (SensorType == 'O' || SensorType == 'o')
+	else if (sensorType == 'O' || sensorType == 'o')
 	{
 		delete sensor;
 		OxygenReduction* sensor = new OxygenReduction(sensorPort);
 	}
-	else if (SensorType == 'D' || SensorType == 'd')
+	else if (sensorType == 'D' || sensorType == 'd')
 	{
 		delete sensor;
 		DissolvedOxygen* sensor = new DissolvedOxygen(sensorPort);
 	}
-	else if (SensorType == 'P' || SensorType == 'p')
+	else if (sensorType == 'P' || sensorType == 'p')
 	{
 		delete sensor;
 		PH* sensor = new PH(sensorPort);
@@ -79,6 +79,40 @@ void SensorManager::addSensor()
 		_sensorList.push_back(sensor);
 		std::cout<< std::endl;
 	}	
+}
+
+void SensorManager::addSensor(char sensorType, int sensorPort, int additionalPort)
+{
+	Ultrassonic* sensor = new Ultrassonic(0, 0);
+	if (sensorType == 'U' || sensorType == 'u') {
+		delete sensor;
+		Ultrassonic* sensor = new Ultrassonic(sensorPort, additionalPort);
+	}
+	else if (sensorType == 'T' || sensorType == 't')
+	{
+		delete sensor;
+		Thermal* sensor = new Thermal(sensorPort);
+	}
+	else if (sensorType == 'O' || sensorType == 'o')
+	{
+		delete sensor;
+		OxygenReduction* sensor = new OxygenReduction(sensorPort);
+	}
+	else if (sensorType == 'D' || sensorType == 'd')
+	{
+		delete sensor;
+		DissolvedOxygen* sensor = new DissolvedOxygen(sensorPort);
+	}
+	else if (sensorType == 'P' || sensorType == 'p')
+	{
+		delete sensor;
+		PH* sensor = new PH(sensorPort);
+	}
+	else
+	{
+		delete sensor;
+		std::cout << "Unknown Sensor" << endl;
+	}
 }
 
 SensorList SensorManager::getList()

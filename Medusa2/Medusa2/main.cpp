@@ -58,7 +58,22 @@ void manualConfiguration()
 void automaticConfiguration()
 {
 	std::cout << "Automatic Sensor Configuration" << std::endl;
+	SensorManager* sensorManager = new SensorManager;
 	// Automatic configuration
+	// 3 ultrasonic 
+	// 2 thermal 
+	// 1 oxygen reduction 
+	// 1 dissolved oxygen
+	// 1 ph
+	sensorManager->addSensor('u', 1, 2);
+	sensorManager->addSensor('u', 3, 4);
+	sensorManager->addSensor('u', 5, 6);
+	sensorManager->addSensor('t', 7);
+	sensorManager->addSensor('t', 8);
+	sensorManager->addSensor('o', 9);
+	sensorManager->addSensor('d', 10);
+	sensorManager->addSensor('p', 11);
+	std::cout << "Finished configuring all sensors" << std::endl;
 }
 
 void setup()

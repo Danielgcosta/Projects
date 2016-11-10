@@ -14,6 +14,7 @@ public:
 
 	// Adds a sensor to the table
 	void addSensor();
+	void addSensor(char sensorType, int sensorPort, int additionalPort = 0);
 	SensorList getList();
 	
 protected:
