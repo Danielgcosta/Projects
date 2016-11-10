@@ -8,6 +8,7 @@ class Ultrassonic :	public Sensor
 {
 public:
 	Ultrassonic(int port, int trigger);
+	Ultrassonic(int port);
 	~Ultrassonic();
 	int getTrigger();
 	void setTrigger(int port);

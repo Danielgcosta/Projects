@@ -9,6 +9,15 @@ Ultrassonic::Ultrassonic(int port, int trigger) : Sensor(port)
 	setTrigger(trigger);
 }
 
+Ultrassonic::Ultrassonic(int port) : Sensor(port)
+{
+	cout << "Select trigger port: " << endl;
+	int trigger;
+	cin >> trigger;
+	_type = "Ultrassonic";
+	setTrigger(trigger);
+}
+
 Ultrassonic::~Ultrassonic()
 {
 }
