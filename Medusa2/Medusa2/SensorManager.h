@@ -14,6 +14,7 @@ public:
 
 	// Adds a sensor to the table
 	void addSensor();
+	SensorList getList();
 	
 protected:
 	// sensor name and sensor object table

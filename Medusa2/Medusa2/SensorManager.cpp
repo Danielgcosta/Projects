@@ -1,11 +1,11 @@
-#include "SensorManager.h"
 #include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
-#include <memory> //shared_ptr
+#include <list>
 
 //Sensors
+#include "SensorManager.h"
 #include "DissolvedOxygen.h"
 #include "OxygenReduction.h"
 #include "PH.h"
@@ -17,7 +17,7 @@ using namespace std;
 
 SensorManager::SensorManager()
 {
-	vector<shared_ptr<Sensor*>> _sensorList;
+	SensorList _sensorList;
 }
 
 SensorManager::~SensorManager()
@@ -79,4 +79,9 @@ void SensorManager::addSensor()
 		std::cout << "The reading of this sensor is " << sensor->getValue() << endl;
 		_sensorList.push_back(sensor);
 	}	
+}
+
+SensorList SensorManager::getList()
+{
+	return _sensorList;
 }
