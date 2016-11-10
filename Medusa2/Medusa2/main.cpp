@@ -24,8 +24,7 @@
 #include "stdio.h"
 #include <iostream>
 #include <string>
-
-#include "SensorFactory.h"
+#include "SensorManager.h"
 
 using namespace std;
 
@@ -33,8 +32,16 @@ int main() {
 	std::cout << "Medusa 2.0 danielgc@ele.puc-rio.br" << endl;
 	std::cout << "Sensor type and port configuration" << endl << endl;
 	
-	SensorFactory* sensorFactory = new SensorFactory();
-	sensorFactory->addSensor();
+	SensorManager* sensorManager = new SensorManager;
+	sensorManager->addSensor();
+	std::cout << "First Sensor Configured";
+
+
+
+	sensorManager->addSensor();
+	std::cout << "Second Sensor Configured";
+	sensorManager->addSensor();
+	std::cout << "Third Sensor Configured";
 
 	int exitChar;
 	std::cin >> exitChar;

@@ -1,25 +1,30 @@
-#include "SensorFactory.h"
+#include "SensorManager.h"
+#include <algorithm>
 #include <iostream>
 #include <string>
+#include <vector>
+#include <memory> //shared_ptr
 
 //Sensors
-#include "Ultrassonic.h"
-#include "Thermal.h"
-#include "OxygenReduction.h"
 #include "DissolvedOxygen.h"
+#include "OxygenReduction.h"
 #include "PH.h"
+#include "Sensor.h"
+#include "Thermal.h"
+#include "Ultrassonic.h"
 
 using namespace std;
 
-SensorFactory::SensorFactory()
+SensorManager::SensorManager()
+{
+	vector<shared_ptr<Sensor*>> _sensorList;
+}
+
+SensorManager::~SensorManager()
 {
 }
 
-SensorFactory::~SensorFactory()
-{
-}
-
-void SensorFactory::addSensor()
+void SensorManager::addSensor()
 {
 	std::cout << "Select sensor type: " << endl;
 	std::cout << "[U]ltrassonic, [T]hermal, [P]h, [D]issolvedOxygen, [O]xygenReduction " << endl;
@@ -32,8 +37,10 @@ void SensorFactory::addSensor()
 	std::cin >> sensorPort;
 
 	bool unknownSensor = false;
+
+	// Must create a default sensor or else it won't compile
 	Ultrassonic* sensor = new Ultrassonic(0, 0);
-	if (SensorType == 'U' || SensorType == 'u') {
+	if (SensorType == 'U' || SensorType == 'u' ) {
 		delete sensor;
 		std::cout << "Select trigger port: " << endl;
 		int triggerPort;
@@ -70,5 +77,6 @@ void SensorFactory::addSensor()
 		std::cout << "The selected Sensor was configured to port " << sensor->getPort() << endl;
 		std::cout << "The selected Sensor is of type " << sensor->getType() << endl;
 		std::cout << "The reading of this sensor is " << sensor->getValue() << endl;
-	}
+		_sensorList.push_back(sensor);
+	}	
 }

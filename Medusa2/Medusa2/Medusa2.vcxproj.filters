@@ -36,7 +36,7 @@
     <ClInclude Include="OxygenReduction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SensorFactory.h">
+    <ClInclude Include="SensorManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,7 +62,7 @@
     <ClCompile Include="OxygenReduction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SensorFactory.cpp">
+    <ClCompile Include="SensorManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
