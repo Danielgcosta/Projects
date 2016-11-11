@@ -84,7 +84,7 @@ void setup()
 	//Serial.println("Medusa 2.0 danielgc@ele.puc-rio.br");
 	//Serial.println("Sensor type and port configuration\n");
 
-	// For Oxygen Reduction and dissolvedOxygen sensors
+	// For Oxygen Reduction and Dissolved Oxygen sensors
 	// oxygenReductionSerial.begin(9600);
 	// dissolvedOxygenSerial.begin(9600);
 	
@@ -105,9 +105,13 @@ void setup()
 
 void loop()
 {
-	// Read sensors
+	// Configure sensors
+	// Read ultrasonic sensors
 	// Evaluate fuzzy trajectory avoidance
 	// Activate motors (send data to Ardupilot)
+
+	// Every once in a while (1 in 100 occurences)
+	// Read physicochemical sensors
 	// Evaluate fuzzy alert
 }
 
